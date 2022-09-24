@@ -9,11 +9,10 @@ using System.Threading.Tasks;
 namespace Library.Controllers
 {
     [ApiController]
-    [Route(template: "v1")]
-    public class LivroControllers : ControllerBase
+    [Route("api/livros")]
+    public class LivrosControllers : ControllerBase
     {
         [HttpGet]
-        [Route("livros")]
         public async Task<IActionResult> GetAsync([FromServices] AppDbContext context)
         {
             var livros = await context.Livros.AsNoTracking().ToListAsync();
@@ -22,7 +21,7 @@ namespace Library.Controllers
         }
 
         [HttpGet]
-        [Route("livros/{id}")]
+        [Route("{id}")]
         public async Task<IActionResult> GetByIdAsync([FromServices] AppDbContext context, [FromRoute] int id)
         {
             var livro = await context.Livros.FirstOrDefaultAsync(x => x.Id == id);
@@ -31,7 +30,6 @@ namespace Library.Controllers
         }
 
         [HttpPost]
-        [Route("livros")]
         public async Task<IActionResult> PostAsync([FromServices] AppDbContext context, [FromBody] CreateLivroViewModel model)
         {
             if (!ModelState.IsValid)
@@ -56,7 +54,7 @@ namespace Library.Controllers
         }
 
         [HttpPut]
-        [Route("livros/{id}")]
+        [Route("{id}")]
         public async Task<IActionResult> PutAsync([FromServices] AppDbContext context, [FromBody] CreateLivroViewModel model, [FromRoute] int id)
         {
             if (!ModelState.IsValid)
@@ -84,7 +82,7 @@ namespace Library.Controllers
         }
 
         [HttpDelete]
-        [Route("livros/{id}")]
+        [Route("{id}")]
         public async Task<IActionResult> DeleteAsync([FromServices] AppDbContext context, [FromRoute] int id)
         {
             if (!ModelState.IsValid)

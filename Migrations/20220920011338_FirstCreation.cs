@@ -1,8 +1,7 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace Library.Migrations
+namespace LibraryControl.Migrations
 {
     public partial class FirstCreation : Migration
     {
@@ -15,9 +14,7 @@ namespace Library.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Title = table.Column<string>(type: "text", nullable: true),
-                    IsRented = table.Column<bool>(type: "boolean", nullable: false),
-                    DateRented = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    DateDelivered = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    Author = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {

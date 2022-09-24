@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>CRUD DE LIVROS</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="/js/home.js"></script>
+</head>
+<body>
+    <div class="page">
+        <h1>Crud de livros</h1>
+        <p>Que tipo de operação deseja fazer?</p>
+        <form>
+            <input type="radio" id="create" name="select_crud" value="Cadastrar" />
+            <label for="create">Cadastrar (C)</label><br>
+
+            <input type="radio" id="read" name="select_crud" value="Consultar" />
+            <label for="read">Consultar (R)</label><br>
+
+            <input type="radio" id="update" name="select_crud" value="Editar" />
+            <label for="update">Editar (U)</label><br>
+
+            <input type="radio" id="delete" name="select_crud" value="Excluir" />
+            <label for="delete">Excluir (D)</label><br><br>
+        </form>
+        <input onClick="OtherPage()" type="submit" value="Apertar" />
+    </div>
+</body>
+</html>

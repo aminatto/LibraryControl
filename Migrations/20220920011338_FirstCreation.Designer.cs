@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace Library.Migrations
+namespace LibraryControl.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220625181638_UpdateTabelaLivros")]
-    partial class UpdateTabelaLivros
+    [Migration("20220920011338_FirstCreation")]
+    partial class FirstCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

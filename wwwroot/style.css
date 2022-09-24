@@ -1,0 +1,13 @@
+﻿body {
+    background: #808080;
+}
+
+.page {
+    padding: 20px;
+    border-style: double;
+    border-color: black;
+    border-radius: 5%;
+    background: #7470dd;
+    width: 500px;
+    height: 500px;
+}
